@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2016 Mobvoi Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- Begin Ticwear theme styles -->
+
+    <style name="WindowTitle" />
+
+    <style name="WindowTitle.Ticwear" >
+        <!-- TODO: Checkout why this may cause scalable text disappear -->
+        <!--<item name="android:singleLine">true</item>-->
+        <item name="android:textAppearance">@style/TextAppearance.Ticwear.WindowTitle</item>
+        <item name="android:shadowRadius">0</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="WindowTitle.Ticwear.Small">
+        <item name="android:textAppearance">@style/TextAppearance.Ticwear.WindowTitle.Small</item>
+    </style>
+
+    <style name="WindowIcon" />
+    <style name="WindowIcon.Ticwear" >
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WindowAppBar" />
+    <style name="WindowAppBar.Ticwear">
+        <item name="android:minHeight">57dp</item>
+        <item name="android:paddingStart">?android:listPreferredItemPaddingStart</item>
+        <item name="android:paddingEnd">?android:listPreferredItemPaddingEnd</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="WindowAppBar.Ticwear.Small">
+        <item name="android:minHeight">46dp</item>
+    </style>
+    <style name="WindowAppBar.Ticwear.Minimize">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <!-- Animation Styles -->
+
+    <style name="Animation"/>
+    <style name="Animation.Ticwear"/>
+
+    <style name="Animation.Ticwear.Activity" parent="android:Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:activityOpenExitAnimation">@anim/scale_out_ticwear</item>
+        <item name="android:activityCloseEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:taskOpenEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:taskOpenExitAnimation">@anim/scale_out_ticwear</item>
+        <item name="android:taskCloseEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:taskCloseExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperOpenEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:wallpaperOpenExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperCloseEnterAnimation">@anim/front_scale_in_ticwear</item>
+        <item name="android:wallpaperCloseExitAnimation">@anim/scale_out_ticwear</item>
+        <item name="android:wallpaperIntraOpenEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:wallpaperIntraOpenExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperIntraCloseEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:wallpaperIntraCloseExitAnimation">@anim/scale_out_ticwear</item>
+        <!--<item name="android:fragmentOpenEnterAnimation">@animator/fragment_open_enter</item>-->
+        <!--<item name="android:fragmentOpenExitAnimation">@animator/fragment_open_exit</item>-->
+        <!--<item name="android:fragmentCloseEnterAnimation">@animator/fragment_close_enter</item>-->
+        <!--<item name="android:fragmentCloseExitAnimation">@animator/fragment_close_exit</item>-->
+        <!--<item name="android:fragmentFadeEnterAnimation">@animator/fragment_fade_enter</item>-->
+        <!--<item name="android:fragmentFadeExitAnimation">@animator/fragment_fade_exit</item>-->
+    </style>
+
+    <style name="Animation.Ticwear.Activity.Translucent">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:activityOpenExitAnimation">@anim/scale_out_ticwear</item>
+        <item name="android:activityCloseEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:taskOpenEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:taskOpenExitAnimation">@anim/scale_out_ticwear</item>
+        <item name="android:taskCloseEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:taskCloseExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperOpenEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:wallpaperOpenExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperCloseEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:wallpaperCloseExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperIntraOpenEnterAnimation">@anim/scale_in_ticwear</item>
+        <item name="android:wallpaperIntraOpenExitAnimation">@anim/slide_out_ticwear</item>
+        <item name="android:wallpaperIntraCloseEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:wallpaperIntraCloseExitAnimation">@anim/scale_out_ticwear</item>
+    </style>
+
+    <!-- animations for a non-full-screen window or activity. -->
+    <style name="Animation.Ticwear.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_ticwear</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_ticwear</item>
+    </style>
+
+    <style name="Animation.Ticwear.Dialog.NonSwipe">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- Dialog styles -->
+
+    <style name="AlertDialog.Ticwear" parent="android:Theme.Material.Dialog.Alert">
+        <item name="android:layout">@layout/alert_dialog_ticwear</item>
+        <item name="tic_listLayout">@layout/list_content_ticklable</item>
+        <item name="tic_multiChoiceItemLayout">@layout/select_dialog_multichoice_ticwear</item>
+        <item name="tic_singleChoiceItemLayout">@layout/select_dialog_singlechoice_ticwear</item>
+        <item name="tic_listItemLayout">@layout/select_dialog_item_ticwear</item>
+
+    </style>
+
+</resources>

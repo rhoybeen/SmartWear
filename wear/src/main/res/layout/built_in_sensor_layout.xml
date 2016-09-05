@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rhomeine.smartwear.BuiltinSensorActivity"
+    android:background="@drawable/bg03"
+    tools:deviceIds="wear"
+    app:layout_box="all">
+
+
+    <android.support.wearable.view.DismissOverlayView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dismissOverlay">
+
+    </android.support.wearable.view.DismissOverlayView>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:id="@+id/linear_1">
+
+        <TextView android:text="11"
+            android:layout_width="wrap_content"
+            android:id="@+id/heartbeat"
+            android:layout_height="wrap_content"
+            android:textColor="#525857"
+            android:textSize="80sp"
+            android:autoText="false"
+            android:layout_marginLeft="10dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom|left">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pic_up"
+                android:id="@+id/icon_up"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pic_down"
+                android:id="@+id/icon_down"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pic_ok"
+                android:id="@+id/icon_ok"/>
+
+            <TextView android:text="bpm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_bpm"
+                android:textColor="#525857"
+                android:textSize="16sp"
+                android:layout_below="@id/icon_up"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/proBar_circle"
+        android:max="100"
+        android:progress="30"
+        android:layout_gravity="center"
+        android:progressBackgroundTint="#5e2626"
+        android:layout_centerInParent="true"
+        android:layout_alignBottom="@id/linear_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:id="@+id/linear_2"
+        android:layout_below="@id/linear_1">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_score"
+            android:text="Score:\n-/-"
+            android:textSize="12sp"
+            android:layout_marginLeft="15dp" />
+
+        <ProgressBar
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/proBar_score"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:max="100"
+            android:progress="30"
+            android:minHeight="6dp"
+            android:maxHeight="6dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:progressDrawable="@drawable/progressbar1"
+            android:paddingRight="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear_3"
+        android:layout_below="@id/linear_2"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_time"
+            android:text="10'12"
+            android:layout_marginLeft="15dp"
+            android:textSize="12sp"/>
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/proBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:max="100"
+            android:progress="30"
+            android:minHeight="6dp"
+            android:maxHeight="6dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:progressDrawable="@drawable/progressbar2"/>
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_min"
+            android:text="30'"
+            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:numStars="3"
+            android:max="100"
+            android:progress="80"
+            android:rating="3"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_section"
+        android:text="Section/Week: -/-"
+        android:textSize="12sp"
+        android:layout_below="@id/linear_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:textColor="@android:color/white"
+        app:layout_box="all" />
+
+</android.support.wearable.view.BoxInsetLayout>

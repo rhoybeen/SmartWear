@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HRTraining</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_wearable_list_view">WearableListViewActivity</string>
+    <string name="title_activity_profile_setting">ProfileSetting</string>
+    <string name="title_activity_spinner">SpinnerActivity</string>
+    <string name="title_activity_age_picker">AgePickerActivity</string>
+    <string name="title_activity_device_setting">DeviceSettingActivity</string>
+    <string name="title_activity_auto_confirm_setting">AutoConfirmSettingActivity</string>
+    <string name="use_built_in_sensor">Now we get your data\n from the built-in sensor</string>
+    <string name="title_activity_builtin_sensor">BuiltinSensorActivity</string>
+    <string name="title_activity_device_setting2">DeviceSettingActivity2</string>
+    <string name="msg_sent">Profile Updated!</string>
+    <string name="title_activity_trace">TraceActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_user_init">UserInitActivity</string>
+</resources>

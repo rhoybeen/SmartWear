@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rhomeine.smartwear">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+
+        <!-- @android:style/Theme.DeviceDefault -->
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".SpinnerActivity"
+            android:label="@string/title_activity_spinner"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity
+            android:name=".DeviceSettingActivity"
+            android:label="@string/title_activity_device_setting"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+        <activity android:name="android.support.wearable.activity.ConfirmationActivity" />
+
+        <!-- android:theme="@android:style/Theme.DeviceDefault.Light" -->
+        <activity
+            android:name=".BuiltinSensorActivity"
+            android:label="@string/title_activity_builtin_sensor"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".HeartBeatService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".LightService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".TraceActivity"
+            android:label="@string/title_activity_trace"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+
+        <service
+            android:name=".DataLayerListenerService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".UserInitActivity"
+            android:label="@string/title_activity_user_init"
+            android:theme="@android:style/Theme.DeviceDefault.Light">
+        </activity>
+    </application>
+
+</manifest>

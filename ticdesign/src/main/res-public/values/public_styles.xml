@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Mobvoi Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <public type="style" name="Widget.Ticwear.FloatingActionButton" />
+    <public type="style" name="Widget.Ticwear.CollapsingToolbar" />
+    <public type="style" name="Widget.Ticwear.AppBarLayout" />
+    <public type="style" name="Widget.Ticwear.CoordinatorLayout" />
+    <public type="style" name="Widget.Ticwear.NumberPicker" />
+    <public type="style" name="Widget.Ticwear.CompoundButton" />
+    <public type="style" name="Widget.Ticwear.CompoundButton.Switch" />
+
+    <public type="style" name="TextAppearance.Ticwear.CollapsingToolbar.Expanded" />
+
+    <public type="style" name="PreferenceFragment.Ticwear" />
+    <public type="style" name="PreferenceActivity.Ticwear" />
+    <public type="style" name="Preference.Ticwear" />
+    <public type="style" name="Preference.Ticwear.Information" />
+    <public type="style" name="Preference.Ticwear.Centered" />
+    <public type="style" name="Preference.Ticwear.CheckBoxPreference" />
+    <public type="style" name="Preference.Ticwear.SwitchPreference" />
+    <public type="style" name="Preference.Ticwear.PreferenceScreen" />
+    <public type="style" name="PreferencePanel.Ticwear" />
+    <public type="style" name="PreferenceHeaderPanel.Ticwear" />
+
+    <public type="style" name="TextAppearance.Ticwear" />
+    <public type="style" name="TextAppearance.Ticwear.Headline" />
+    <public type="style" name="TextAppearance.Ticwear.Title" />
+    <public type="style" name="TextAppearance.Ticwear.Title.Inverse" />
+    <public type="style" name="TextAppearance.Ticwear.Body2" />
+    <public type="style" name="TextAppearance.Ticwear.Body1" />
+    <public type="style" name="TextAppearance.Ticwear.Hint1" />
+    <public type="style" name="TextAppearance.Ticwear.Hint2" />
+    <public type="style" name="TextAppearance.Ticwear.Button" />
+    <public type="style" name="TextAppearance.Ticwear.Inverse" />
+    <public type="style" name="TextAppearance.Ticwear.Large" />
+    <public type="style" name="TextAppearance.Ticwear.Large.Inverse" />
+    <public type="style" name="TextAppearance.Ticwear.Medium" />
+    <public type="style" name="TextAppearance.Ticwear.Medium.Inverse" />
+    <public type="style" name="TextAppearance.Ticwear.Small" />
+    <public type="style" name="TextAppearance.Ticwear.Small.Inverse" />
+    <public type="style" name="TextAppearance.Ticwear.Widget" />
+    <public type="style" name="TextAppearance.Ticwear.Widget.Button" />
+
+    <public type="style" name="TextAppearance.Ticwear.TimePicker.TimeLabel" />
+    <public type="style" name="TextAppearance.Ticwear.TimePicker.AmPmLabel" />
+    <public type="style" name="TextAppearance.Ticwear.WindowTitle" />
+    <public type="style" name="TextAppearance.Ticwear.WindowTitle.Small" />
+    <public type="style" name="TextAppearance.Ticwear.DialogWindowTitle" />
+
+    <public type="style" name="WindowTitle.Ticwear" />
+    <public type="style" name="WindowIcon.Ticwear" />
+    <public type="style" name="WindowAppBar.Ticwear" />
+    <public type="style" name="WindowAppBar.Ticwear.Small" />
+    <public type="style" name="WindowAppBar.Ticwear.Minimize" />
+
+    <public type="style" name="Animation.Ticwear.Activity" />
+    <public type="style" name="Animation.Ticwear.Activity.Translucent" />
+    <public type="style" name="Animation.Ticwear.Dialog" />
+    <public type="style" name="Animation.Ticwear.Dialog.NonSwipe" />
+    <public type="style" name="AlertDialog.Ticwear" />
+
+    <public type="style" name="Theme.Ticwear" />
+    <public type="style" name="Theme.Ticwear.Fullscreen" />
+    <public type="style" name="Theme.Ticwear.Dialog" />
+    <public type="style" name="Theme.Ticwear.Dialog.Alert" />
+    <public type="style" name="Theme.Ticwear.Dialog.Alert.SameButtonStyle" />
+    <public type="style" name="Theme.Ticwear.Dialog.Alert.Compact" />
+    <public type="style" name="Theme.Ticwear.Dialog.Alert.Datetime" />
+    <public type="style" name="Theme.Ticwear.Dialog.Alert.NonSwipe" />
+
+
+    <public type="style" name="Widget.Ticwear.TimePicker" />
+    <public type="style" name="Widget.Ticwear.DatePicker" />
+
+    <public type="style" name="Widget.Ticwear.ListView" />
+    <public type="style" name="Widget.Ticwear.ListItem" />
+
+    <public type="style" name="Widget.Ticwear.CirclePageIndicator" />
+
+    <public type="style" name="Widget.Ticwear.ImageButton.Mini" />
+    <public type="style" name="Widget.Ticwear.ImageButton.Normal" />
+    <public type="style" name="Widget.Ticwear.ImageButton.Large" />
+    <public type="style" name="Widget.Ticwear.PrimaryButton" />
+
+    <public type="style" name="Widget.Ticwear.ButtonBar" />
+    <public type="style" name="Widget.Ticwear.FloatingActionButton.ButtonBar" />
+
+    <public type="style" name="Widget.Ticwear.VolumeBar" />
+
+</resources>

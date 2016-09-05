@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2016 Mobvoi Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <!-- = Difference from normal to large -->
+    <dimen name="preference_icon_frame_margin_diff">-4dp</dimen>
+    <!-- = tic_list_item_text_margin_normal - 4dp -->
+    <dimen name="preference_icon_frame_margin_end">10dp</dimen>
+    <dimen name="preference_padding_vertical">6dp</dimen>
+
+    <!-- Preference activity, vertical padding for the header list -->
+    <dimen name="preference_screen_header_vertical_padding_ticwear">0dp</dimen>
+
+    <!-- Preference activity side margins -->
+    <dimen name="preference_screen_side_margin_ticwear">0dp</dimen>
+    <!-- Preference activity side margins negative-->
+    <dimen name="preference_screen_side_margin_negative_ticwear">0dp</dimen>
+
+    <!-- Preference fragment padding, bottom -->
+    <dimen name="preference_fragment_padding_bottom_ticwear">0dp</dimen>
+    <!-- Preference fragment padding, sides -->
+    <dimen name="preference_fragment_padding_side_ticwear">0dp</dimen>
+
+    <dimen name="preference_screen_header_padding_side_ticwear">0dp</dimen>
+
+    <!-- Weight of the left pane in a multi-pane preference layout. -->
+    <integer name="preferences_left_pane_weight_ticwear">4</integer>
+    <!-- Weight of the right pane in a multi-pane preference layout. So the split is 40:60 -->
+    <integer name="preferences_right_pane_weight_ticwear">6</integer>
+
+    <integer name="preference_screen_header_scrollbarStyle_ticwear">0x02000000</integer> <!-- outsideOverlay -->
+
+    <integer name="preference_fragment_scrollbarStyle_ticwear">0x02000000</integer> <!-- outsideOverlay -->
+</resources>

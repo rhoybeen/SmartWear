@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Mobvoi Inc.
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<resources>
+
+    <style name="Widget">
+        <item name="android:textAppearance">?android:textAppearance</item>
+    </style>
+    <style name="Widget.Ticwear"/>
+
+    <style name="Widget.Ticwear.PreferenceFrameLayout">
+        <item name="tic_borderTop">0dip</item>
+        <item name="tic_borderBottom">0dip</item>
+        <item name="tic_borderLeft">?attr/tic_preferenceFragmentPaddingSide</item>
+        <item name="tic_borderRight">?attr/tic_preferenceFragmentPaddingSide</item>
+    </style>
+
+    <style name="Widget.Ticwear.NumberPicker">
+        <item name="android:orientation">vertical</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">50dip</item>
+
+        <item name="tic_solidColor">@android:color/transparent</item>
+        <item name="tic_selectionDivider">@drawable/number_picker_divider_ticwear</item>
+        <item name="tic_selectionDividerHeight">2dip</item>
+        <item name="tic_internalLayout">@layout/number_picker_with_selector_wheel_ticwear</item>
+        <item name="tic_internalMinWidth">64dip</item>
+        <item name="tic_internalMaxHeight">180dip</item>
+        <item name="tic_virtualButtonPressedDrawable">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Ticwear.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+        <item name="tic_legacyLayout">@layout/time_picker_ticwear</item>
+        <!-- Attributes for new-style TimePicker. -->
+        <item name="tic_internalLayout">@layout/time_picker_ticwear</item>
+        <item name="android:headerTimeTextAppearance">@style/TextAppearance.Ticwear.TimePicker.TimeLabel</item>
+        <item name="android:headerAmPmTextAppearance">@style/TextAppearance.Ticwear.TimePicker.AmPmLabel</item>
+        <item name="tic_headerSelectedTextColor">?android:textColorPrimaryInverse</item>
+        <item name="android:headerBackground">@drawable/time_picker_header_ticwear</item>
+        <item name="android:numbersTextColor">?android:textColorSecondary</item>
+        <item name="android:numbersBackgroundColor">#10ffffff</item>
+        <item name="android:amPmTextColor">?android:textColorSecondary</item>
+        <item name="android:amPmBackgroundColor">@android:color/transparent</item>
+        <item name="tic_amPmSelectedBackgroundColor">?android:colorControlActivated</item>
+        <item name="android:numbersSelectorColor">?android:colorControlActivated</item>
+    </style>
+
+    <style name="Widget.Ticwear.DatePicker">
+        <!-- Attributes for new-style DatePicker. -->
+        <item name="android:datePickerMode">spinner</item>
+        <item name="tic_legacyLayout">@layout/date_picker_ticwear</item>
+        <item name="tic_internalLayout">@layout/date_picker_ticwear</item>
+        <item name="android:calendarViewShown">false</item>
+        <item name="android:dayOfWeekBackground">#10000000</item>
+        <!--<item name="android:dayOfWeekTextAppearance">@style/TextAppearance.Material.DatePicker.DayOfWeekLabel</item>-->
+        <!--<item name="android:headerMonthTextAppearance">@style/TextAppearance.Material.DatePicker.MonthLabel</item>-->
+        <!--<item name="android:headerDayOfMonthTextAppearance">@style/TextAppearance.Material.DatePicker.DayOfMonthLabel</item>-->
+        <!--<item name="android:headerYearTextAppearance">@style/TextAppearance.Material.DatePicker.YearLabel</item>-->
+        <item name="tic_headerSelectedTextColor">?android:textColorPrimaryInverse</item>
+        <item name="android:headerBackground">?android:colorAccent</item>
+        <!--<item name="android:yearListItemTextAppearance">@style/TextAppearance.Material.DatePicker.List.YearLabel</item>-->
+        <item name="android:yearListSelectorColor">?android:colorControlActivated</item>
+        <item name="android:calendarTextColor">?android:textColorSecondary</item>
+        <item name="tic_calendarSelectedTextColor">?android:colorControlActivated</item>
+        <item name="tic_allowNumericMonths">false</item>
+    </style>
+
+    <style name="Widget.Ticwear.ListView">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingBottom">@dimen/tic_list_padding_bottom_ticwear</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:scrollbarSize">0dp</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+
+    <style name="Widget.Ticwear.ListView.Dialog">
+        <item name="android:paddingStart">@dimen/alert_dialog_message_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/alert_dialog_message_padding_horizontal</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="Widget.Ticwear.ListView.Dialog.Compact">
+        <item name="android:paddingStart">?android:listPreferredItemPaddingStart</item>
+        <item name="android:paddingEnd">?android:listPreferredItemPaddingEnd</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="Widget.Ticwear.ListItem">
+        <item name="android:minHeight">?android:listPreferredItemHeight</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/tic_list_item_padding_horizontal_large_ticwear</item>
+        <item name="android:paddingEnd">@dimen/tic_list_item_padding_horizontal_ticwear</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+
+    <style name="Widget.Ticwear.CompoundButton" parent="android:Widget.CompoundButton">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.Ticwear.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/tic_ic_check_small</item>
+    </style>
+
+    <style name="Widget.Ticwear.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/tic_ic_radio_small</item>
+    </style>
+
+    <style name="Widget.Ticwear.CompoundButton.Switch">
+        <item name="android:button">@drawable/tic_ic_switch</item>
+    </style>
+
+    <style name="Widget.Ticwear.ImageButton">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="Widget.Ticwear.ImageButton.Mini">
+        <item name="android:minHeight">@dimen/tic_round_button_size_mini</item>
+        <item name="android:minWidth">@dimen/tic_round_button_size_mini</item>
+        <item name="android:padding">@dimen/tic_round_button_src_padding_mini</item>
+    </style>
+
+    <style name="Widget.Ticwear.ImageButton.Normal">
+        <item name="android:minHeight">@dimen/tic_round_button_size_normal</item>
+        <item name="android:minWidth">@dimen/tic_round_button_size_normal</item>
+        <item name="android:padding">@dimen/tic_round_button_src_padding_normal</item>
+    </style>
+
+    <style name="Widget.Ticwear.ImageButton.Large">
+        <item name="android:minHeight">@dimen/tic_round_button_size_large</item>
+        <item name="android:minWidth">@dimen/tic_round_button_size_large</item>
+        <item name="android:padding">@dimen/tic_round_button_src_padding_large</item>
+    </style>
+
+    <style name="Widget.Ticwear.CirclePageIndicator">
+        <item name="android:fillColor">?android:textColorPrimary</item>
+        <item name="android:strokeColor">@android:color/black</item>
+        <item name="tic_pageColor">?android:textColorHint</item>
+        <item name="tic_strokeWidth">0dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="tic_centered">true</item>
+    </style>
+
+    <style name="Widget.Ticwear.PrimaryButton">
+        <item name="android:layout_width">@dimen/tic_primary_button_width</item>
+        <item name="android:layout_height">@dimen/tic_primary_button_height</item>
+        <item name="android:layout_gravity">center_horizontal|bottom</item>
+        <item name="android:background">?android:colorControlNormal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="Widget.Ticwear.FloatingActionButton" parent="android:Widget">
+        <item name="android:backgroundTint">?android:colorAccent</item>
+        <item name="android:elevation">@dimen/tic_design_fab_elevation</item>
+        <item name="tic_fabSize">normal</item>
+        <item name="tic_pressedTranslationZ">@dimen/tic_design_fab_translation_z_pressed</item>
+        <item name="tic_rippleColor">?android:colorControlHighlight</item>
+        <item name="tic_borderWidth">@dimen/tic_design_fab_border_width</item>
+    </style>
+
+    <style name="Widget.Ticwear.FloatingActionButton.Dialog">
+        <item name="android:alpha">@dimen/tic_alert_dialog_button_alpha</item>
+        <item name="tic_circularDrawableStyle">@style/Widget.Ticwear.CircularProgressDrawable.Dialog</item>
+    </style>
+
+    <style name="Widget.Ticwear.FloatingActionButton.Dialog.Negative">
+        <item name="android:backgroundTint">@color/tic_basic_gold_grey_darken</item>
+    </style>
+
+    <style name="Widget.Ticwear.CircularProgressDrawable">
+        <item name="tic_cpd_strokeSize">4dp</item>
+        <item name="tic_cpd_padding">0dp</item>
+        <item name="tic_cpd_initialAngle">-90</item>
+        <item name="tic_cpd_progress">0</item>
+        <item name="tic_cpd_progressMode">indeterminate</item>
+        <item name="tic_cpd_secondaryProgress">0</item>
+        <item name="tic_cpd_minSweepAngle">30</item>
+        <item name="tic_cpd_maxSweepAngle">270</item>
+        <item name="tic_cpd_reverse">false</item>
+        <item name="tic_cpd_rotateDuration">3000</item>
+        <item name="tic_cpd_transformDuration">1500</item>
+        <item name="tic_cpd_keepDuration">200</item>
+        <item name="tic_cpd_inAnimDuration">0</item>
+        <item name="tic_cpd_outAnimDuration">@android:integer/config_shortAnimTime</item>
+        <item name="tic_cpd_progressAlpha">0x7f</item>
+    </style>
+
+    <style name="Widget.Ticwear.CircularProgressDrawable.Dialog">
+        <item name="tic_cpd_progressAlpha">0xff</item>
+    </style>
+
+    <style name="Widget.Ticwear.ScrollBar" parent="android:Widget">
+        <item name="tic_scroll_bar_strokeWidth">3dp</item>
+        <item name="tic_scroll_bar_margin">2dp</item>
+        <item name="tic_scroll_bar_bgColor">?android:colorControlNormal</item>
+        <item name="tic_scroll_bar_sweepColor">?android:colorControlHighlight</item>
+    </style>
+
+    <style name="Widget.Ticwear.VolumeBar" parent="android:Widget">
+        <item name="tic_vb_valueColor">?android:colorAccent</item>
+        <item name="tic_vb_bgColor">@color/tic_widget_background_dark</item>
+        <item name="tic_vb_btnImageSize">18dp</item>
+        <item name="tic_vb_touchPadding">0dp</item>
+        <item name="tic_vb_thumbImage">@drawable/tic_ic_volumeup_32px</item>
+        <item name="tic_vb_thumbLeftImage">@drawable/tic_ic_volumenone_32px</item>
+    </style>
+
+    <style name="Widget.Ticwear.VolumeBar.Volume">
+        <item name="tic_vb_valueColor">@color/tic_basic_indigo</item>
+        <item name="tic_vb_bgColor">@color/tic_basic_gold_grey_darken</item>
+        <item name="tic_vb_touchPadding">8dp</item>
+    </style>
+</resources>
+

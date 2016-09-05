@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.rhomeine.smartwear.MainActivity"
+    tools:showIn="@layout/app_bar_navigate">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Mode"
+            android:id="@+id/switcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_googleapi"
+            android:text="Switch on to receive Wear messages."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textview"
+            android:text="No message"/>
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalScrollView"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/line_button">
+            <view
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                class="com.example.rhomeine.smartwear.LineView"
+                android:id="@+id/line_view"/>
+        </HorizontalScrollView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="4dp"
+            android:id="@+id/cardview"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#edf9a8">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="80sp"
+                    android:text="80"
+                    android:id="@+id/text_hr"
+                    android:visibility="invisible"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/timer"
+                    android:id="@+id/img_timer"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_time"
+                    android:text="Time: 17'20 /30 mins"
+                    android:layout_toRightOf="@id/img_timer"
+                    android:layout_alignBottom="@id/img_timer"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/scores"
+                    android:id="@+id/img_score"
+                    android:layout_below="@id/img_timer"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_score"
+                    android:text="Score: 17 /30"
+                    android:layout_toRightOf="@id/img_score"
+                    android:layout_alignBottom="@id/img_score"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/heat"
+                    android:id="@+id/img_calorie"
+                    android:layout_below="@id/img_score"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_calorie"
+                    android:text="Calorie:170 kcal"
+                    android:layout_toRightOf="@id/img_calorie"
+                    android:layout_alignBottom="@id/img_calorie"
+                    android:layout_marginLeft="10dp"/>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

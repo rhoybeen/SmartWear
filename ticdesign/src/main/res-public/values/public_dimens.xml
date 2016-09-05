@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Mobvoi Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <public type="dimen" name="tic_page_horizontal_padding_normal" />
+    <public type="dimen" name="tic_page_horizontal_padding_small" />
+
+    <public type="dimen" name="tic_list_item_padding_horizontal_ticwear" />
+    <public type="dimen" name="tic_list_item_padding_horizontal_large_ticwear" />
+    <public type="dimen" name="tic_list_padding_top_ticwear" />
+    <public type="dimen" name="tic_list_padding_bottom_ticwear" />
+
+    <public type="dimen" name="tic_list_item_status_box_size_normal" />
+    <public type="dimen" name="tic_list_item_status_box_size_large" />
+    <public type="dimen" name="tic_list_item_status_box_size_small" />
+    <public type="dimen" name="tic_list_item_icon_frame_size_normal" />
+    <public type="dimen" name="tic_list_item_icon_frame_size_large" />
+    <public type="dimen" name="tic_list_item_icon_frame_size_small" />
+    <public type="dimen" name="tic_list_item_icon_src_size" />
+
+    <public type="dimen" name="tic_text_size_extra_extra_large" />
+    <public type="dimen" name="tic_text_size_extra_large" />
+    <public type="dimen" name="tic_text_size_large_1" />
+    <public type="dimen" name="tic_text_size_large_2" />
+    <public type="dimen" name="tic_text_size_medium_1" />
+    <public type="dimen" name="tic_text_size_medium_2" />
+    <public type="dimen" name="tic_text_size_small_1" />
+    <public type="dimen" name="tic_text_size_small_2" />
+    <public type="dimen" name="tic_text_size_extra_small" />
+    <public type="dimen" name="tic_text_line_spacing_multiplier" />
+
+    <public type="dimen" name="tic_text_size_title_ticwear" />
+    <public type="dimen" name="tic_text_size_title_small_ticwear" />
+    <public type="dimen" name="tic_text_size_body_1_ticwear" />
+    <public type="dimen" name="tic_text_size_body_2_ticwear" />
+    <public type="dimen" name="tic_text_size_hint_1_ticwear" />
+    <public type="dimen" name="tic_text_size_hint_2_ticwear" />
+    <public type="dimen" name="tic_text_size_button_ticwear" />
+    <public type="dimen" name="tic_text_size_large_ticwear" />
+    <public type="dimen" name="tic_text_size_medium_ticwear" />
+    <public type="dimen" name="tic_text_size_small_ticwear" />
+
+    <public type="dimen" name="tic_round_button_size_large" />
+    <public type="dimen" name="tic_round_button_size_normal" />
+    <public type="dimen" name="tic_round_button_size_mini" />
+    <public type="dimen" name="tic_round_button_src_padding_large" />
+    <public type="dimen" name="tic_round_button_src_padding_normal" />
+    <public type="dimen" name="tic_round_button_src_padding_mini" />
+    <public type="dimen" name="tic_primary_button_width" />
+    <public type="dimen" name="tic_primary_button_height" />
+</resources>

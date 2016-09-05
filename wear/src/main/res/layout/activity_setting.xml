@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rhomeine.smartwear.SettingActivity"
+    tools:deviceIds="wear">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_box="all"
+        android:background="#ffffff"
+        android:layout_gravity="center">
+        <com.example.rhomeine.smartwear.PickerView
+            android:layout_width="80dp"
+            android:layout_height="160dp"
+            android:id="@+id/picker_age"
+            android:background="#ffffffff"/>
+        <com.example.rhomeine.smartwear.PickerView
+            android:layout_width="80dp"
+            android:layout_height="160dp"
+            android:id="@+id/picker_weight"/>
+        <com.example.rhomeine.smartwear.PickerView
+            android:layout_width="80dp"
+            android:layout_height="160dp"
+            android:id="@+id/picker_height"/>
+        <com.example.rhomeine.smartwear.PickerView
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:id="@+id/picker_gender"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_cm"
+            android:text="CM"
+            android:layout_toRightOf="@id/picker_age"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_year"
+            android:text="years"
+            android:layout_toRightOf="@id/picker_age"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_kg"
+            android:text="kg"
+            android:layout_toRightOf="@id/picker_age"
+            android:layout_centerVertical="true"/>
+
+        <android.support.wearable.view.CircledImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_s1"
+            app:circle_radius="40dp"
+            android:src="@drawable/check_green"
+            app:circle_border_width="-10dp"
+            app:circle_color="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/text_cm"
+            android:layout_marginLeft="15dp"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:textColor="@android:color/white"
+        app:layout_box="all" />
+
+</android.support.wearable.view.BoxInsetLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">HRTraining</string>
+    <string name="sound_high_HR">Your heart rate is too high. Take care</string>
+    <string name="sound_low_HR">Your heart rate is too low. Speed up</string>
+    <string name="sound_goal_achieved">Congratulations! You have gotten enough training scores</string>
+    <string name="sound_time_overceed">Time out. 10 minutes more. Come on!</string>
+    <string name="sound_section_failed">Time is up. Section fails</string>
+    <string name="sound_section_end">Section ends. Congratulations!</string>
+    <string name="sound_section_start">Section starts. Increase your heart rate!</string>
+    <string name="sound_section_dir_quit">Section is terminated</string>
+
+    <string name="sound_high_HR1">您的心率过高 请注意</string>
+    <string name="sound_low_HR1">您的心率过低 请加速</string>
+    <string name="sound_goal_achieved1">恭喜您成功完成本小节</string>
+    <string name="sound_time_overceed1">训练超时 延长十分钟</string>
+    <string name="sound_section_failed1">时间到 训练失败</string>
+    <string name="sound_section_end1">训练结束 恭喜您</string>
+    <string name="sound_section_start1">训练开始 请提升您的心率</string>
+    <string name="sound_section_dir_quit1">训练中止</string>
+
+
+    <string name="title_activity_navigate">NavigateActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="val_null">Value cannot be null.</string>
+    <string name="val_illegal">Please input a number.</string>
+</resources>
