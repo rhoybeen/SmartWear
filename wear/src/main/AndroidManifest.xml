@@ -49,18 +49,14 @@
             android:label="@string/title_activity_setting"
             android:theme="@android:style/Theme.DeviceDefault.Light" />
         <activity
-            android:name=".SpinnerActivity"
-            android:label="@string/title_activity_spinner"
-            android:theme="@android:style/Theme.DeviceDefault.Light" />
-        <activity
-            android:name=".DeviceSettingActivity"
+            android:name=".TrainingSettingActivity"
             android:label="@string/title_activity_device_setting"
             android:theme="@android:style/Theme.DeviceDefault.Light" />
         <activity android:name="android.support.wearable.activity.ConfirmationActivity" />
 
         <!-- android:theme="@android:style/Theme.DeviceDefault.Light" -->
         <activity
-            android:name=".BuiltinSensorActivity"
+            android:name=".TrainingActivity"
             android:label="@string/title_activity_builtin_sensor"
             android:theme="@style/AppTheme" />
 

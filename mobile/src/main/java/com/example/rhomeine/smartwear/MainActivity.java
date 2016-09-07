@@ -561,7 +561,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
          //   startActivity(new Intent(MainActivity.this,LoginWebViewActivity.class));
 
         } else if (id == R.id.nav_statics) {
-
+            startActivity(new Intent(this,LoginActivity.class));
         } else if (id == R.id.nav_schedule) {
 
         } else if (id == R.id.nav_likeus) {

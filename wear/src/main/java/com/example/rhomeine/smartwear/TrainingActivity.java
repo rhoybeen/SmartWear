@@ -31,7 +31,7 @@ import java.util.Locale;
 import java.util.Random;
 import android.os.Handler;
 
-public class BuiltinSensorActivity extends WearableActivity implements HeartBeatService.OnChangeListener, LightUtils.OnLightListener{
+public class TrainingActivity extends WearableActivity implements HeartBeatService.OnChangeListener, LightUtils.OnLightListener{
 
     private static final SimpleDateFormat AMBIENT_DATE_FORMAT =
             new SimpleDateFormat("HH:mm", Locale.US);
@@ -109,7 +109,7 @@ public class BuiltinSensorActivity extends WearableActivity implements HeartBeat
                 Log.i("Runnable", "HRsensor is initiated now; HRvalue" + HeartRateTraining.getHRValue());
                 proBar.setVisibility(View.INVISIBLE);
                 linearLayout.setVisibility(View.VISIBLE);
-                HeartRateTraining.StartTrainingSection(BuiltinSensorActivity.this);
+                HeartRateTraining.StartTrainingSection(TrainingActivity.this);
                 mSection.setText("Section/Week: " + Integer.toString(HeartRateTraining.getSecLength()) + "/" + Integer.toString(HeartRateTraining.getSecNum()));
                 target = Integer.toString(HeartRateTraining.getTarget());
                 mScore.setText("Score/Target: 0"+"/"+target);
@@ -194,7 +194,7 @@ public class BuiltinSensorActivity extends WearableActivity implements HeartBeat
             public void onServiceConnected(ComponentName componentName, IBinder binder) {
                 Log.d(LOG_TAG, "connected to service.");
                 // set our change listener to get change events
-                ((HeartBeatService.HeartbeatServiceBinder) binder).setChangeListener(BuiltinSensorActivity.this);
+                ((HeartBeatService.HeartbeatServiceBinder) binder).setChangeListener(TrainingActivity.this);
             }
 
             @Override
@@ -203,7 +203,7 @@ public class BuiltinSensorActivity extends WearableActivity implements HeartBeat
             }
         };
 
-        isBound=getApplicationContext().bindService(new Intent(BuiltinSensorActivity.this, HeartBeatService.class),connection , Service.BIND_AUTO_CREATE);
+        isBound=getApplicationContext().bindService(new Intent(TrainingActivity.this, HeartBeatService.class),connection , Service.BIND_AUTO_CREATE);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();

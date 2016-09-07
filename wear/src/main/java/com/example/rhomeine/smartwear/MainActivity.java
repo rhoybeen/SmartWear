@@ -1,18 +1,12 @@
 package com.example.rhomeine.smartwear;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
 import android.support.wearable.view.CircledImageView;
-import android.support.wearable.view.DismissOverlayView;
-import android.support.wearable.view.WearableListView;
 import android.util.Log;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -24,11 +18,8 @@ import com.github.johnpersano.supertoasts.SuperToast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 public class MainActivity extends WearableActivity{
 
@@ -133,7 +124,7 @@ public class MainActivity extends WearableActivity{
             @Override
             public void onClick(View v) {
                 //An quick start
-                Intent intent = new Intent(MainActivity.this,BuiltinSensorActivity.class);
+                Intent intent = new Intent(MainActivity.this,TrainingActivity.class);
                 startActivity(intent);
             }
         });
@@ -142,7 +133,7 @@ public class MainActivity extends WearableActivity{
         button_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,DeviceSettingActivity.class);
+                Intent intent = new Intent(MainActivity.this,TrainingSettingActivity.class);
                 startActivity(intent);
             }
         });

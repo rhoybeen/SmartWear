@@ -2,7 +2,6 @@ package com.example.rhomeine.smartwear;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Message;
@@ -15,9 +14,7 @@ import com.github.johnpersano.supertoasts.SuperActivityToast;
 import com.github.johnpersano.supertoasts.SuperToast;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.PendingResults;
 import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.wearable.DataApi;
 import com.google.android.gms.wearable.MessageApi;
 import com.google.android.gms.wearable.MessageEvent;
@@ -26,7 +23,6 @@ import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.PutDataMapRequest;
 import com.google.android.gms.wearable.PutDataRequest;
 import com.google.android.gms.wearable.Wearable;
-import com.google.android.gms.wearable.WearableStatusCodes;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,15 +30,12 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -50,7 +43,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.TimeZone;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -226,7 +218,7 @@ public class HeartRateTraining {
                     message.what = 1;
                     message.arg1 = TimerDura;
                     message.arg2 = StageNow;
-                    BuiltinSensorActivity.myHandler.sendMessage(message);
+                    TrainingActivity.myHandler.sendMessage(message);
                     sendMessageToHandheld("/sec_dura",intToByteArray(TimerDura));
                     TrainingAlert(FLAG_OVERTIME);
                 }else {
@@ -263,7 +255,7 @@ public class HeartRateTraining {
                 message.what = 0;
                 message.arg1 = scores;
                 message.arg2 = count;
-                BuiltinSensorActivity.myHandler.sendMessage(message);
+                TrainingActivity.myHandler.sendMessage(message);
             }
 
         }
@@ -934,7 +926,7 @@ public class HeartRateTraining {
         message.what = 0;
         message.arg1 = scores;
         message.arg2 = count;
-        BuiltinSensorActivity.myHandler.sendMessage(message);
+        TrainingActivity.myHandler.sendMessage(message);
     }
 
     public static ArrayList<TrainingPeriod> getWeeklyLog() {

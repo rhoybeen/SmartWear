@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-public class DeviceSettingActivity extends WearableActivity implements WearableListView.ClickListener{
+public class TrainingSettingActivity extends WearableActivity implements WearableListView.ClickListener{
 
     private static final SimpleDateFormat AMBIENT_DATE_FORMAT =
             new SimpleDateFormat("HH:mm", Locale.US);
