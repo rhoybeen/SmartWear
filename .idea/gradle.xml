@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/mobile" />
+            <option value="$PROJECT_DIR$/smartloginlibrary-v0.5beta" />
             <option value="$PROJECT_DIR$/supertoasts" />
             <option value="$PROJECT_DIR$/ticdesign" />
             <option value="$PROJECT_DIR$/wear" />
@@ -18,6 +19,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/mobile" />
+            <option value="$PROJECT_DIR$/smartloginlibrary-v0.5beta" />
             <option value="$PROJECT_DIR$/supertoasts" />
             <option value="$PROJECT_DIR$/ticdesign" />
             <option value="$PROJECT_DIR$/wear" />

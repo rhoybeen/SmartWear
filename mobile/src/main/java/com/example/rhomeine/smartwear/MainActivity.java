@@ -57,9 +57,17 @@ import android.os.Handler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import studios.codelight.smartloginlibrary.SmartCustomLoginListener;
+import studios.codelight.smartloginlibrary.SmartLoginBuilder;
+import studios.codelight.smartloginlibrary.SmartLoginConfig;
+import studios.codelight.smartloginlibrary.manager.UserSessionManager;
+import studios.codelight.smartloginlibrary.users.SmartFacebookUser;
+import studios.codelight.smartloginlibrary.users.SmartGoogleUser;
+import studios.codelight.smartloginlibrary.users.SmartUser;
+
 import static com.google.android.gms.wearable.DataEvent.TYPE_CHANGED;
 
-public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener,DataApi.DataListener,NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener,DataApi.DataListener,NavigationView.OnNavigationItemSelectedListener, SmartCustomLoginListener{
 
     private static final String ITEM_KEY_HR = "heartrate";
     private static final String ITEM_KEY_SCORE = "score";
@@ -91,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
     String filename;
 
+    private static boolean is_login = false;
     String PATH = "/hrtraining";
     private final String PATH_HR = "/heartrate";
     private final String ITEM_KEY = "heartrate";
@@ -539,7 +548,18 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
 
         if (id == R.id.nav_user) {
             // Handle the camera action
-            startActivity(new Intent(MainActivity.this,UserProfileActivity.class));
+
+            SmartLoginBuilder loginBuilder = new SmartLoginBuilder();
+            Intent intent = loginBuilder.with(getApplicationContext())
+                    .isFacebookLoginEnabled(false)
+                    .isGoogleLoginEnabled(false)
+                    .isCustomLoginEnabled(true)
+                    .setSmartCustomLoginHelper(MainActivity.this)
+                    .build();
+
+            startActivityForResult(intent, SmartLoginConfig.LOGIN_REQUEST);
+         //   startActivity(new Intent(MainActivity.this,LoginWebViewActivity.class));
+
         } else if (id == R.id.nav_statics) {
 
         } else if (id == R.id.nav_schedule) {
@@ -558,6 +578,28 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    @Override
+    public boolean customSignin(SmartUser user) {
+        //This "user" will have only username and password set.
+        Toast.makeText(MainActivity.this, user.getUsername() + " " + user.getEmail(), Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean customSignup(SmartUser newUser) {
+        //Implement your our custom sign up logic and return true if success
+        return true;
+    }
+
+    @Override
+    public boolean customUserSignout(SmartUser smartUser) {
+        //Implement your logic
+        UserSessionManager.logout(this, smartUser);
+        return true;
+    }
+
+
 
     public void sendMailToAuthor(){
         Intent mail = new Intent(Intent.ACTION_SENDTO);
@@ -631,4 +673,33 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     public Handler getHandler(){
         return this.handler_msg;
     }
+
+
+    //Get Login Info as SmartUser Object
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == SmartLoginConfig.FACEBOOK_LOGIN_REQUEST){
+            SmartFacebookUser user;
+            try {
+                user = data.getParcelableExtra(SmartLoginConfig.USER);
+                //use this user object as per your requirement
+            }catch (Exception e){
+                Log.e(getClass().getSimpleName(), e.getMessage());
+            }
+        }else if(resultCode == SmartLoginConfig.GOOGLE_LOGIN_REQUEST){
+            SmartGoogleUser user;
+            try {
+                user = data.getParcelableExtra(SmartLoginConfig.USER);
+                //use this user object as per your requirement
+            }catch (Exception e){
+                Log.e(getClass().getSimpleName(), e.getMessage());
+            }
+        }else if(resultCode == SmartLoginConfig.CUSTOM_LOGIN_REQUEST){
+            SmartUser user = data.getParcelableExtra(SmartLoginConfig.USER);
+            //use this user object as per your requirement
+        }else if(resultCode == RESULT_CANCELED){
+            //Login Failed
+        }
+    }
+
 }
