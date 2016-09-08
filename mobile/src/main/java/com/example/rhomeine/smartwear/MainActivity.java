@@ -25,6 +25,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rhomeine.smartwear.Login.util.DialogUtil;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -57,13 +58,13 @@ import android.os.Handler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import studios.codelight.smartloginlibrary.SmartCustomLoginListener;
-import studios.codelight.smartloginlibrary.SmartLoginBuilder;
-import studios.codelight.smartloginlibrary.SmartLoginConfig;
-import studios.codelight.smartloginlibrary.manager.UserSessionManager;
-import studios.codelight.smartloginlibrary.users.SmartFacebookUser;
-import studios.codelight.smartloginlibrary.users.SmartGoogleUser;
-import studios.codelight.smartloginlibrary.users.SmartUser;
+import com.example.rhomeine.smartwear.Login.SmartCustomLoginListener;
+import com.example.rhomeine.smartwear.Login.SmartLoginBuilder;
+import com.example.rhomeine.smartwear.Login.SmartLoginConfig;
+import com.example.rhomeine.smartwear.Login.manager.UserSessionManager;
+import com.example.rhomeine.smartwear.Login.users.SmartFacebookUser;
+import com.example.rhomeine.smartwear.Login.users.SmartGoogleUser;
+import com.example.rhomeine.smartwear.Login.users.SmartUser;
 
 import static com.google.android.gms.wearable.DataEvent.TYPE_CHANGED;
 
@@ -549,16 +550,12 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         if (id == R.id.nav_user) {
             // Handle the camera action
 
-            SmartLoginBuilder loginBuilder = new SmartLoginBuilder();
-            Intent intent = loginBuilder.with(getApplicationContext())
-                    .isFacebookLoginEnabled(false)
-                    .isGoogleLoginEnabled(false)
-                    .isCustomLoginEnabled(true)
-                    .setSmartCustomLoginHelper(MainActivity.this)
-                    .build();
-
-            startActivityForResult(intent, SmartLoginConfig.LOGIN_REQUEST);
-         //   startActivity(new Intent(MainActivity.this,LoginWebViewActivity.class));
+            UserLogin userLogin = new UserLogin(this);
+            if(userLogin.login()){
+                SmartUser smartUser = UserSessionManager.getCurrentUser(this);
+                String username = smartUser.getUsername();
+                Toast.makeText(this,username + " login successfully!",Toast.LENGTH_SHORT).show();
+            }
 
         } else if (id == R.id.nav_statics) {
             startActivity(new Intent(this,LoginActivity.class));
@@ -578,28 +575,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    @Override
-    public boolean customSignin(SmartUser user) {
-        //This "user" will have only username and password set.
-        Toast.makeText(MainActivity.this, user.getUsername() + " " + user.getEmail(), Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public boolean customSignup(SmartUser newUser) {
-        //Implement your our custom sign up logic and return true if success
-        return true;
-    }
-
-    @Override
-    public boolean customUserSignout(SmartUser smartUser) {
-        //Implement your logic
-        UserSessionManager.logout(this, smartUser);
-        return true;
-    }
-
-
 
     public void sendMailToAuthor(){
         Intent mail = new Intent(Intent.ACTION_SENDTO);
@@ -702,4 +677,13 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         }
     }
 
+    @Override
+    public boolean customSignin(SmartUser user) {
+        return false;
+    }
+
+    @Override
+    public boolean customSignup(SmartUser newUser) {
+        return false;
+    }
 }

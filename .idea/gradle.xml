@@ -5,12 +5,11 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:\android-studio\gradle\gradle-2.10" />
+        <option name="gradleHome" value="D:\android-studio\gradle\gradle-2.14.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/mobile" />
-            <option value="$PROJECT_DIR$/smartloginlibrary-v0.5beta" />
             <option value="$PROJECT_DIR$/supertoasts" />
             <option value="$PROJECT_DIR$/ticdesign" />
             <option value="$PROJECT_DIR$/wear" />
@@ -20,7 +19,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/mobile" />
-            <option value="$PROJECT_DIR$/smartloginlibrary-v0.5beta" />
             <option value="$PROJECT_DIR$/supertoasts" />
             <option value="$PROJECT_DIR$/ticdesign" />
             <option value="$PROJECT_DIR$/wear" />

@@ -56,7 +56,7 @@
         android:text="Show Smart Login"
         android:textSize="20sp"
         android:textColor="@color/white"
-        android:background="@color/accent_color" />
+        android:background="@color/colorAccent" />
 
     <TextView
         android:id="@+id/login_result"

@@ -1,0 +1,11 @@
+package com.example.rhomeine.smartwear.Login;
+
+import com.example.rhomeine.smartwear.Login.users.SmartUser;
+
+/**
+ * Created by Kalyan on 9/11/2015.
+ */
+public interface SmartCustomLoginListener {
+    boolean customSignin(SmartUser user);
+    boolean customSignup(SmartUser newUser);
+}

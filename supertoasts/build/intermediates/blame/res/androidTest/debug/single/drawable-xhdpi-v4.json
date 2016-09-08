@@ -1,7 +1,7 @@
 [
     {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_undo.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_undo.png"
+        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_share.png",
+        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_share.png"
     },
     {
         "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_refresh.png",
@@ -12,8 +12,8 @@
         "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_exit.png"
     },
     {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_refresh.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_refresh.png"
+        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_save.png",
+        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_save.png"
     },
     {
         "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_save.png",
@@ -28,16 +28,24 @@
         "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_edit.png"
     },
     {
+        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_redo.png",
+        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_redo.png"
+    },
+    {
+        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_edit.png",
+        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_edit.png"
+    },
+    {
         "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_info.png",
         "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_info.png"
     },
     {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_share.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_share.png"
+        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_info.png",
+        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_info.png"
     },
     {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_refresh.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_refresh.png"
+        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_exit.png",
+        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_exit.png"
     },
     {
         "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_undo.png",
@@ -48,83 +56,11 @@
         "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_undo.png"
     },
     {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_undo.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_undo.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_edit.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_edit.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_exit.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_exit.png"
-    },
-    {
         "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_share.png",
         "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_share.png"
     },
     {
         "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_refresh.png",
         "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_refresh.png"
-    },
-    {
-        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_share.png",
-        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_share.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_save.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_save.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_info.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_info.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_redo.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_redo.png"
-    },
-    {
-        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_save.png",
-        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_save.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_info.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_info.png"
-    },
-    {
-        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_edit.png",
-        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_edit.png"
-    },
-    {
-        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_redo.png",
-        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_redo.png"
-    },
-    {
-        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_light_info.png",
-        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_light_info.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_edit.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_edit.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_save.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_save.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_redo.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_redo.png"
-    },
-    {
-        "merged": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_exit.png",
-        "source": "C:\\Users\\WSPN\\Documents\\GitHub\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_exit.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_share.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_share.png"
-    },
-    {
-        "merged": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\icon_dark_exit.png",
-        "source": "C:\\Users\\rhomeine\\AndroidStudioProjects\\SmartWear\\supertoasts\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\icon_dark_exit.png"
     }
 ]

@@ -1,1 +1,1 @@
-include ':mobile', ':wear', ':supertoasts', ':ticdesign', ':smartloginlibrary-v0.5beta'
+include ':mobile', ':wear', ':supertoasts', ':ticdesign'

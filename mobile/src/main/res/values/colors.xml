@@ -8,4 +8,29 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#212121</color>
     <color name="divider">#B6B6B6</color>
+    <color name="blue_1">#2196F3</color>
+    <color name="blue_2">#1976D2</color>
+    <color name="grey_0">#BBDEFB</color>
+    <color name="blue_0">#448AFF</color>
+    <color name="dark_0">#212121</color>
+    <color name="grey_2">#727272</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_1">#B6B6B6</color>
+    <color name="grey_mi">#dcedc8</color>
+    <color name="green_0">#35b93b</color>
+    <color name="grey_3">#F5F5F5</color>
+    <color name="yellow_0">#fff063</color>
+    <color name="primary_color">#3F51B5</color>
+    <color name="dark_primary_color">#303F9F</color>
+    <color name="accent_color">#FF5722</color>
+    <color name="card_background">#efefef</color>
+    <color name="facebook_brand_color">#3B5998</color>
+    <color name="google_plus_brand_color">#dc4e41</color>
+    <color name="black">#000000</color>
+
+    <color name="login_primary">#009688</color> <!-- 500 -->
+    <color name="login_primary_dark">#00796B</color> <!-- 700 -->
+    <color name="login_primary_darker">#00695C</color> <!-- 800 -->
+    <color name="login_accent">#FFFFFF</color>
+    <color name="iron">#CCCCCC</color>
 </resources>

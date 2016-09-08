@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,21 +16,22 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.rhomeine.smartwear.Login.SmartCustomLogoutListener;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 
-import studios.codelight.smartloginlibrary.SmartCustomLoginListener;
-import studios.codelight.smartloginlibrary.SmartLoginBuilder;
-import studios.codelight.smartloginlibrary.SmartLoginConfig;
-import studios.codelight.smartloginlibrary.manager.UserSessionManager;
-import studios.codelight.smartloginlibrary.users.SmartFacebookUser;
-import studios.codelight.smartloginlibrary.users.SmartGoogleUser;
-import studios.codelight.smartloginlibrary.users.SmartUser;
+import com.example.rhomeine.smartwear.Login.SmartCustomLoginListener;
+import com.example.rhomeine.smartwear.Login.SmartLoginBuilder;
+import com.example.rhomeine.smartwear.Login.SmartLoginConfig;
+import com.example.rhomeine.smartwear.Login.manager.UserSessionManager;
+import com.example.rhomeine.smartwear.Login.users.SmartFacebookUser;
+import com.example.rhomeine.smartwear.Login.users.SmartGoogleUser;
+import com.example.rhomeine.smartwear.Login.users.SmartUser;
 
-public class LoginWebViewActivity extends AppCompatActivity implements SmartCustomLoginListener {
+public class LoginWebViewActivity extends AppCompatActivity implements SmartCustomLoginListener,SmartCustomLogoutListener {
 
     TextView loginResult;
     CheckBox customLogin, facebookLogin, googleLogin, appLogoCheckBox;
@@ -84,7 +86,7 @@ public class LoginWebViewActivity extends AppCompatActivity implements SmartCust
                         builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                UserSessionManager.logout(LoginWebViewActivity.this, currentUser);
+                                UserSessionManager.logout(LoginWebViewActivity.this, currentUser,LoginWebViewActivity.this,mGoogleApiClient);
                                 currentUser = UserSessionManager.getCurrentUser(LoginWebViewActivity.this);
                             }
                         });
@@ -108,7 +110,7 @@ public class LoginWebViewActivity extends AppCompatActivity implements SmartCust
                                 .isFacebookLoginEnabled(facebookLogin.isChecked())
                                 .withFacebookAppId(getString(R.string.facebook_app_id)).withFacebookPermissions(permissions)
                                 .isGoogleLoginEnabled(googleLogin.isChecked())
-                                .isCustomLoginEnabled(customLogin.isChecked())
+                                .isCustomLoginEnabled(customLogin.isChecked(),SmartLoginConfig.LoginType.withUsername)
                                 .setSmartCustomLoginHelper(LoginWebViewActivity.this)
                                 .build();
 
@@ -186,7 +188,7 @@ public class LoginWebViewActivity extends AppCompatActivity implements SmartCust
     @Override
     public boolean customUserSignout(SmartUser smartUser) {
         //Implement your logic
-        UserSessionManager.logout(this, smartUser);
+        UserSessionManager.logout(this, smartUser,this,mGoogleApiClient);
         return true;
     }
 
@@ -201,6 +203,7 @@ public class LoginWebViewActivity extends AppCompatActivity implements SmartCust
     @Override
     public boolean customSignup(SmartUser newUser) {
         //Implement your our custom sign up logic and return true if success
+        Log.i("Login",newUser.getEmail()+"registered!");
         return true;
     }
 
