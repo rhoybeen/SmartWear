@@ -27,7 +27,6 @@ public class SmartLoginConfig{
     public static final String FACEBOOKID = "studios.codelight.facebook_id";
     public static final String CUSTOMUSERFLAG = "studios.codelight.custom_user";
     public static final String CUSTOMLOGINTYPE = "studios.codelight.custom_login_type";
-
     public static final String USER_TYPE = "user_type";
 
     public static final int FACEBOOK_LOGIN_REQUEST = 1;
@@ -35,6 +34,8 @@ public class SmartLoginConfig{
     public static final int CUSTOM_LOGIN_REQUEST = 3;
     public static final int CUSTOM_SIGNUP_REQUEST = 4;
     public static final int LOGIN_REQUEST = 5;
+
+
 
     public SmartLoginConfig() {
     }

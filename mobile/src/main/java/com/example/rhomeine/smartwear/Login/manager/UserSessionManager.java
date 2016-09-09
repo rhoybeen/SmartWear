@@ -140,6 +140,10 @@ public class UserSessionManager {
                         });
                         return logoutStatus[0];
                     case SmartLoginConfig.CUSTOMUSERFLAG:
+                        editor.remove(SmartLoginConfig.USER_TYPE);
+                        editor.remove(USER_SESSION);
+                        editor.apply();
+                        Toast.makeText(context,"Log out successfully!",Toast.LENGTH_SHORT).show();
 //                        if(!smartCustomLogoutListener.customUserSignout(user)){
 //                            throw new Exception("User not logged out");
 //                        }
@@ -152,7 +156,6 @@ public class UserSessionManager {
             //    DialogUtil.getErrorDialog(R.string.network_error, context).show();
                 return false;
             }
-
         } catch (Exception e){
             Log.e("User Logout Error", e.getMessage());
             return false;
