@@ -34,8 +34,12 @@ public class SmartLoginConfig{
     public static final int CUSTOM_LOGIN_REQUEST = 3;
     public static final int CUSTOM_SIGNUP_REQUEST = 4;
     public static final int LOGIN_REQUEST = 5;
+    public static final int UPDATE_PROFILE = 6;
 
-
+    public static final String LOGIN_OK = "customloginok";
+    public static final String LOGIN_FAIL = "customloginfails";
+    public static final String SIGNUP_OK = "customsignupok";
+    public static final String SIGNUP_FAIL = "customsignupfails";
 
     public SmartLoginConfig() {
     }

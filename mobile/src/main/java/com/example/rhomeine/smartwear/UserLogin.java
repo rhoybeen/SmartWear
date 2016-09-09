@@ -3,10 +3,7 @@ package com.example.rhomeine.smartwear;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
-import android.util.Xml;
 
 import com.example.rhomeine.smartwear.Login.SmartCustomLoginListener;
 import com.example.rhomeine.smartwear.Login.SmartCustomLogoutListener;
@@ -20,12 +17,9 @@ import com.google.gson.JsonObject;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
-import java.io.InterruptedIOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -38,8 +32,7 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
     final static String ADMIN = "rhoybeen";
     final static String ADMIN_PWD = "rhoy2012";
     final String LOG_TAG = "UserLogin";
-    final static String LOGIN_OK = "customloginok";
-    final static String LOGIN_FAIL = "customloginfails";
+
 
     Context context;
     UserLogin(){
@@ -78,8 +71,9 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
     //verify the username & password
     @Override
     public boolean customSignin(SmartUser user){
+        Log.i(LOG_TAG,"customSignin");
         ExecutorService pool = Executors.newFixedThreadPool(1);
-        Callable callable = new signinWithServerCallable(user);
+        Callable callable = new ConnectWithServerCallable(user,SmartLoginConfig.CUSTOM_LOGIN_REQUEST);
         Future future = pool.submit(callable);
         boolean result = false;
         try{
@@ -92,25 +86,38 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
 
     @Override
     public boolean customSignup(SmartUser newUser) {
-        return true;
+        Log.i(LOG_TAG,"customSignup");
+        ExecutorService pool = Executors.newFixedThreadPool(1);
+        Callable callable = new ConnectWithServerCallable(newUser,SmartLoginConfig.CUSTOM_SIGNUP_REQUEST);
+        Future future = pool.submit(callable);
+        boolean result = false;
+        try{
+            result = (Boolean) future.get();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return result;
     }
 
     @Override
     public boolean customUserSignout(SmartUser smartUser) {
-        Log.i("LOG_OUT","customUserSignout");
+        Log.i(LOG_TAG,"customUserSignout");
         UserSessionManager.logout((Activity) context,smartUser,this,null);
         return true;
     }
 
-    class signinWithServerCallable implements Callable<Boolean>{
+    class ConnectWithServerCallable implements Callable<Boolean>{
         private boolean resultSignin;
         private SmartUser user;
-        public signinWithServerCallable(){
+        private int actionType;
+        public ConnectWithServerCallable(){
             resultSignin = false;
+            actionType = 0;
         }
-        public signinWithServerCallable(SmartUser user){
-            resultSignin = false;
+        public ConnectWithServerCallable(SmartUser user,int action){
+            this.resultSignin = false;
             this.user = user;
+            this.actionType = action;
         }
         @Override
         public Boolean call() throws Exception {
@@ -127,9 +134,18 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
                 conn.connect();
 
                 JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("REQUEST_TYPE",SmartLoginConfig.CUSTOM_LOGIN_REQUEST);
-                jsonObject.addProperty("USER_NAME",user.getUsername());
-                jsonObject.addProperty("PASSWORD",user.getPassword());
+                jsonObject.addProperty("REQUEST_TYPE",actionType);
+                switch (actionType){
+                    case SmartLoginConfig.CUSTOM_LOGIN_REQUEST:
+                        jsonObject.addProperty("USER_NAME",user.getUsername());
+                        jsonObject.addProperty("PASSWORD",user.getPassword());
+                        break;
+                    case SmartLoginConfig.CUSTOM_SIGNUP_REQUEST:
+                        jsonObject.addProperty("USER_NAME",user.getUsername());
+                        jsonObject.addProperty("PASSWORD",user.getPassword());
+                        jsonObject.addProperty("EMAIL",user.getEmail());
+                    default:break;
+                }
 
                 byte[] requestStrBytes = jsonObject.toString().getBytes("UTF-8");
 
@@ -152,12 +168,30 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
                     while((readLine=responseReader.readLine()) != null){
                         stringBuffer.append(readLine);
                     }
-                    if(stringBuffer.toString().trim().equals(LOGIN_OK)){
-                        resultSignin = true;
-                        Log.i(LOG_TAG,"LOGIN_OK "+ stringBuffer);
-                    }else{
-                        resultSignin = false;
-                        Log.i(LOG_TAG,"LOGIN_FAIL "+ stringBuffer);
+//                    if(stringBuffer.toString().trim().equals(SmartLoginConfig.LOGIN_OK)){
+//                        resultSignin = true;
+//                        Log.i(LOG_TAG,"LOGIN_OK "+ stringBuffer);
+//                    }else{
+//                        resultSignin = false;
+//                        Log.i(LOG_TAG,"LOGIN_FAIL "+ stringBuffer);
+//                    }
+                    switch (stringBuffer.toString()){
+                        case SmartLoginConfig.LOGIN_OK:
+                            resultSignin = true;
+                            Log.i(LOG_TAG,"LOGIN_OK "+ stringBuffer);
+                            break;
+                        case SmartLoginConfig.LOGIN_FAIL:
+                            resultSignin = false;
+                            Log.i(LOG_TAG,"LOGIN_FAIL "+ stringBuffer);
+                            break;
+                        case SmartLoginConfig.SIGNUP_OK:
+                            resultSignin = true;
+                            Log.i(LOG_TAG,"SIGNUP_OK "+ stringBuffer);
+                            break;
+                        case SmartLoginConfig.SIGNUP_FAIL:
+                            resultSignin = false;
+                            Log.i(LOG_TAG,"SIGNUP_FAIL "+ stringBuffer);
+                            break;
                     }
                         responseReader.close();
                     Log.i(LOG_TAG,"HTTP OK! Response=>" + stringBuffer);
