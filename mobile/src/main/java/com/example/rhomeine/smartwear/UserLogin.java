@@ -131,7 +131,7 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
                 conn.setRequestProperty("Charset", "UTF-8");
                 conn.setDoOutput(true);
                 conn.setDoInput(true);
-                conn.connect();
+
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("REQUEST_TYPE",actionType);
@@ -150,9 +150,10 @@ public class UserLogin implements SmartCustomLoginListener,SmartCustomLogoutList
                 byte[] requestStrBytes = jsonObject.toString().getBytes("UTF-8");
 
                 conn.setRequestProperty("Content-length", "" + requestStrBytes.length);
-                conn.setRequestProperty("Content-Type", "application/octet-stream");
+                conn.setRequestProperty("Content-Type", "application/json");
                 conn.setRequestProperty("Connection", "Keep-Alive");// 维持长连接
                 conn.setRequestProperty("Charset", "UTF-8");
+                conn.connect();
 
                 DataOutputStream dataOutputStream = new DataOutputStream(conn.getOutputStream());
                 dataOutputStream.write(requestStrBytes);
